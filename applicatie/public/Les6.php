@@ -1,9 +1,4 @@
 <?php
-    $huis = [
-        'slaapkamer' => [0, 0, 1, 0, 1, 0],
-        'woonkamer' => [1, 0, 0, 1, 0, 0],
-        'keuken' => [0, 0, 0, 1, 0, 0]  
-    ];
     function isArrayLongerThan($inputArray, $comparison) {
         if (count($inputArray) > $comparison) {
             return true;

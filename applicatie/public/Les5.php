@@ -3,7 +3,7 @@
   $array1 = [1,2,3,4,5,6,7,8,9,10];
   $array2 = array(6,7,8,9,10,11,12,13,14,15);
   $array3 = array_merge($array1, $array2);
-  $arrayFilms = [
+  $films = [
     [
       "title" => "A Wrinkle In Time",
       "year" => 2018,
@@ -39,9 +39,15 @@
   'woonkamer' => [1, 0, 0, 1, 0, 0],
   'keuken' => [0, 0, 0, 1, 0, 0]
   ];
-  
-  function maakEenElement($filmArray) {
 
+  function enkeleFilmNaarHTML($filmArray) {
+    $htmlString = "";
+    $htmlString .= "<h2>Titel = ".$filmArray['title']."</h2>";
+    $htmlString .= "<p>jaartal = ".$filmArray['year']."</p>";
+    $htmlString .= "<p>Regisseur = ".$filmArray['director']."</p>";
+    $htmlString .= "<p>Acteurs = ". $filmArray['stars'][0].",   ".$filmArray['stars'][1]."</p>";
+    $htmlString .= "<img src=".$filmArray['imageURL'].">";
+    return $htmlString;
   }
 ?>
 <!DOCTYPE html>
@@ -71,18 +77,21 @@
       <th>Regisseur</th>
     </tr>
     <tr>
-      <td><?php echo $arrayFilms[1]['title']?></td>
-      <td><?php echo $arrayFilms[1]['year']?></td>
-      <td><?php echo $arrayFilms[1]['director']?></td>
+      <td><?php echo $films[1]['title']?></td>
+      <td><?php echo $films[1]['year']?></td>
+      <td><?php echo $films[1]['director']?></td>
     </tr>
   </table>
-  <?php echo "<img src=".$arrayFilms[1]['imageURL'].">"?>
+  <?php echo "<img src=".$films[1]['imageURL'].">"?>
 
   <h1>Opdracht 2</h1>
-  <?php $arrayTemp = array_slice($arrayFilms, 2, 2, True);
+  <?php $arrayTemp = array_slice($films, 2, 2, True);
   var_dump($arrayTemp);?>
 
   <h1>Opdracht 3</h1>
-
+  <?php echo enkeleFilmNaarHTML($films[0])?>
+  <?php echo enkeleFilmNaarHTML($films[1])?>
+  <?php echo enkeleFilmNaarHTML($films[2])?>
+  <?php echo enkeleFilmNaarHTML($films[3])?>
 </body>
 </html>
