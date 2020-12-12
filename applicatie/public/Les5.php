@@ -1,5 +1,5 @@
 <?php
-  include "functies.php";
+  require_once "functies.php";
   $array1 = [1,2,3,4,5,6,7,8,9,10];
   $array2 = array(6,7,8,9,10,11,12,13,14,15);
   $array3 = array_merge($array1, $array2);
@@ -49,7 +49,13 @@
     $htmlString .= "<img src=".$filmArray['imageURL'].">";
     return $htmlString;
   }
+  $alleHTML = "";
+  $alleHTML .= enkeleFilmNaarHTML($films[0]);
+  $alleHTML .= enkeleFilmNaarHTML($films[1]);
+  $alleHTML .= enkeleFilmNaarHTML($films[2]);
+  $alleHTML .= enkeleFilmNaarHTML($films[3]);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,12 +65,14 @@
 </head>
 <body>
   <h1>Voorbereiding Les 5</h1>
+  <h1>Opdracht 1</h1>
   <?php
     var_dump($array1);
     var_dump($array2);
     var_dump($array3);
-    echo "<p>Lengte film: ".minutenNaarUur(220)."</p>";
   ?>
+  <h1>Opdracht 2</h1>
+  <?php echo "<p>Lengte film: ".minutenNaarUur(220)."</p>";?>
 
   <h1>Les 5</h1>
   <?php var_dump($huis)?>
@@ -89,9 +97,6 @@
   var_dump($arrayTemp);?>
 
   <h1>Opdracht 3</h1>
-  <?php echo enkeleFilmNaarHTML($films[0])?>
-  <?php echo enkeleFilmNaarHTML($films[1])?>
-  <?php echo enkeleFilmNaarHTML($films[2])?>
-  <?php echo enkeleFilmNaarHTML($films[3])?>
+  <?php echo $alleHTML ?>
 </body>
 </html>
