@@ -1,46 +1,36 @@
 <?php
-  $campert = <<<EOD
-  Verzet begint niet met grote woorden
-  maar met kleine daden
-
-  zoals storm met zacht geritsel in de tuin
-  of de kat die de kolder in zijn kop krijgt
-
-  zoals brede rivieren
-  met een kleine bron
-  verscholen in het woud
-
-  zoals een vuurzee
-  met dezelfde lucifer
-  die een sigaret aansteekt
-
-  zoals liefde met een blik
-  een aanraking iets wat je opvalt in een stem
-
-  jezelf een vraag stellen
-  daarmee begint verzet
-
-  en dan die vraag aan een ander stellen.
-  EOD;  
-
-  // We declareren en initialiseren een aantal variabelen.
-  $naam = 'Hogeschool van Arnhem en Nijmegen';
-  $plaats = 'Arnhem';
-  $adres = 'Ruitenberglaan 31';   //string
-  $postcode = '6826 CC';          //string
-  $geslacht = 'm';                //char
-  $isStudent = 'False';           //boolean
-  $leeftijd = '20';               //int
-  $html = "$naam<br>$adres<br>$postcode $plaats";
-  function printOutStringAndLength($input) {
-    echo "<h1>".$input."</h1>";
-    echo "<em>Deze string is ".strlen($input)." tekens lang</em>";
-  }
-  function last3Characters($string) {
-    echo substr($string, strlen($string)-3, 3);
-  }
-  
-?> 
+  $films = [
+    [
+      "title" => "A Wrinkle In Time",
+      "year" => 2018,
+      "director" => "Ava DuVernay",
+      "stars" => ["Storm Reid", "Oprah Winfrey"],
+      "imageURL" => "https://m.media-amazon.com/images/M/MV5BMjMxNjQ5MTI3MV5BMl5BanBnXkFtZTgwMjQ2MTAyNDM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    ],
+    [
+      "title" => "Black Panther",
+      "year" => 2018,
+      "director" => "Ryan Coogler",
+      "stars" => ["Chadwick Boseman", "Michael B. Jordan"],
+      "imageURL" => "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    ],
+    [
+      "title" => "Tenet",
+      "year" => 2020,
+      "director" => "Christopher Nolan",
+      "stars" => ["John David Washington", "Elizabeth Decki"],
+      "imageURL" => "https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_UX182_CR0,0,182,268_AL_.jpg"
+    ],
+    [
+      "title" => "Us",
+      "year" => 2018,
+      "director" => "Jordan Peele",
+      "stars" => ["Lupita Nyong'o ", "Winston Duke"],
+      "imageURL" => "https://m.media-amazon.com/images/M/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    ]
+  ];
+  $output = array_slice($films, 2);
+?>
 <!DOCTYPE html>
 <html lang="nl">
   <head>
@@ -49,14 +39,17 @@
     <title>Kennismaking met PHP - voorbeeld 2</title>
   </head>
   <body>
-    <h1>Kennismaking met PHP - voorbeeld 2</h1>
-    <h2>HAN adresgegevens</h2>
-    <adress>
-      <?php echo $html?>
-    </address>
-    <p><strong>Gebruik de ‘Developer Tools’ om vast te stellen dat alle PHP-broncode omgezet is naar HTML!</strong></p>
-    <p><?php echo "meneer x is $leeftijd jaars oud"?></p>
-    <p><?php printOutStringAndLength($campert)?></p>
-    <p><?php last3Characters($naam)?></p>
-  </body>
+  <table>
+      <tr>
+        <th>Titel</th>
+        <th>Jaar</th>
+        <th>Regisseur</th>
+      </tr>
+      <tr>
+        <td><?php echo $films[1]["title"]?></td>
+        <td><?php echo $films[1]["year"]?></td>
+        <td><?php echo $films[1]["director"]?></td>
+      </tr>
+    </table>
+    <img src=<?php echo $films[1]["imageURL"]?> alt='poster'>
 </html>
