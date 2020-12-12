@@ -1,26 +1,26 @@
 <?php
   $campert = <<<EOD
-  Verzet begint niet met grote woorden<br>
-  maar met kleine daden<br>
-  <br>
-  zoals storm met zacht geritsel in de tuin<br>
-  of de kat die de kolder in zijn kop krijgt<br>
-  <br>
-  zoals brede rivieren<br>
-  met een kleine bron<br>
-  verscholen in het woud<br>
-  <br>
-  zoals een vuurzee<br>
-  met dezelfde lucifer<br>
-  die een sigaret aansteekt<br>
-  <br>
-  zoals liefde met een blik<br>
-  een aanraking iets wat je opvalt in een stem<br>
-  <br>
-  jezelf een vraag stellen<br>
-  daarmee begint verzet<br>
-  <br>
-  en dan die vraag aan een ander stellen.<br>
+  Verzet begint niet met grote woorden
+  maar met kleine daden
+
+  zoals storm met zacht geritsel in de tuin
+  of de kat die de kolder in zijn kop krijgt
+
+  zoals brede rivieren
+  met een kleine bron
+  verscholen in het woud
+
+  zoals een vuurzee
+  met dezelfde lucifer
+  die een sigaret aansteekt
+
+  zoals liefde met een blik
+  een aanraking iets wat je opvalt in een stem
+
+  jezelf een vraag stellen
+  daarmee begint verzet
+
+  en dan die vraag aan een ander stellen.
   EOD;  
 
   // We declareren en initialiseren een aantal variabelen.
@@ -28,20 +28,19 @@
   $plaats = 'Arnhem';
   $adres = 'Ruitenberglaan 31';   //string
   $postcode = '6826 CC';          //string
-  $geslacht = 'm';                //string
-  $isStudent = False;             //boolean
-  $leeftijd = 20;                 //int
-
+  $geslacht = 'm';                //char
+  $isStudent = 'False';           //boolean
+  $leeftijd = '20';               //int
   $html = "$naam<br>$adres<br>$postcode $plaats";
-
   function printOutStringAndLength($input) {
-    echo "<h1>".$input." <em>Deze string is ".strlen($input)." tekens lang</em></h1>";
+    echo "<h1>".$input."</h1>";
+    echo "<em>Deze string is ".strlen($input)." tekens lang</em>";
   }
-
   function last3Characters($string) {
-    echo substr($string, strlen($string)-3);
+    echo substr($string, strlen($string)-3, 3);
   }
-?>
+  
+?> 
 <!DOCTYPE html>
 <html lang="nl">
   <head>
@@ -59,5 +58,6 @@
     <p><?php echo "meneer x is $leeftijd jaars oud"?></p>
     <p><?php printOutStringAndLength($campert)?></p>
     <p><?php last3Characters($naam)?></p>
+    
   </body>
 </html>
