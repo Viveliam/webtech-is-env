@@ -3,6 +3,4 @@ function logo() {
 
 
 }
-
-
 ?>

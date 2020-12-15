@@ -93,7 +93,7 @@
   <?php echo "<img src=".$films[1]['imageURL'].">"?>
 
   <h1>Opdracht 2</h1>
-  <?php $arrayTemp = array_slice($films, 2, 2, True);
+  <?php $arrayTemp = array_slice($films, 2, 2);
   var_dump($arrayTemp);?>
 
   <h1>Opdracht 3</h1>

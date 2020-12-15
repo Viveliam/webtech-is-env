@@ -21,7 +21,9 @@
         if ($cijfer >= 5.5) {
             $voldoendes[] = $cijfer;
         }
-        else $onvoldoendes[] = $cijfer;
+        else {
+            $onvoldoendes[] = $cijfer;
+        }
     }
 
     $myFavorites = [
@@ -35,6 +37,20 @@
             return true;
         }
         else return false;
+    }
+
+    function addToTable($array) {
+        $htmlString = "<table>";
+        $htmlString .= "<tr>";
+        $htmlString .= "<th>".key($array)."</th>";
+        $htmlString .= "<th>jaar</th>";
+        $htmlString .= "<th>Regisseur</th>";
+        $htmlString .= "</tr><tr>";
+        $htmlString .= "<td><?php echo $films[1]['title']?></td>";
+        $htmlString .= "<td><?php echo $films[1]['year']?></td>";
+        $htmlString .= "<td><?php echo $films[1]['director']?></td>";
+        $htmlString .= "</tr>";
+        $htmlString .= "</table>";
     }
 ?>
 <!DOCTYPE html>
@@ -53,13 +69,15 @@
     <?php var_dump($voldoendes);
     var_dump($onvoldoendes);?>
 
-    <h1>Opdracht 2</h1>
-    
+    <h1>Opdracht 3</h1>
+    <?php
+    print_r($myFavorites);
+    ?>
     
     <h1>Les 6</h1>
     <h1>Opdracht 1<h1>
     <p><?php
-    echo isArrayLongerThan();
+
     ?></p>
 </body>
 </html>
