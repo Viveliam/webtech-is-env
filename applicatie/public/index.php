@@ -10,5 +10,6 @@
     <h1><a href="Les4.php">les 4</a></h1>
     <h1><a href="Les5.php">les 5</a></h1>
     <h1><a href="Les6.php">les 6</a></h1>
+    <h1><a href="Les7.php">les 7</a></h1>
 </body>
 </html>

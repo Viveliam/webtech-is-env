@@ -1,13 +1,13 @@
-
 <?php
-    var_dump($_GET);
+  session_start();
+  var_dump($_GET);
 
-    if (isset($_GET['naam'])) {
-        echo "{$_GET['naam']} <br>";
-    };
-    if (isset($_GET['naam'])) {
-        echo "{$_GET['email']} <br>";
-    };
+  if (isset($_GET['naam'])) {
+    echo "{$_GET['naam']} <br>";
+  };
+  if (isset($_GET['naam'])) {
+    echo "{$_GET['mail']} <br>";
+  };
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -18,8 +18,7 @@
   <title>Eenvoudig formulier</title>
 </head>
 <body>
-  <!-- TODO: Ongeldige waarden voor `method` en `action`. -->
-  <form method="get" action="">
+  <form method="post" action="aanmelden.php">
     <div>
       <label for="naam">Naam</label>
       <input type="text" name= "naam" id="naam">
@@ -28,6 +27,7 @@
       <label for="mail">E-mail</label>
       <input type="email" name= "mail" id="mail">
     </div>
+    <input type="hidden" name="oorsprong" value="get">
     <input type="submit" value="Versturen">
   </form>
 </body>
