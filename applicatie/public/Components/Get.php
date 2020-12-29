@@ -21,11 +21,11 @@
   <form method="post" action="aanmelden.php">
     <div>
       <label for="naam">Naam</label>
-      <input type="text" name= "naam" id="naam">
+      <input type="text" name="naam" id="naam">
     </div>
     <div>
       <label for="mail">E-mail</label>
-      <input type="email" name= "mail" id="mail">
+      <input type="email" name="mail" id="mail">
     </div>
     <input type="hidden" name="oorsprong" value="get">
     <input type="submit" value="Versturen">

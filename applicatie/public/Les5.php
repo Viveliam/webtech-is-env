@@ -46,7 +46,6 @@
   $alleHTML .= enkeleFilmNaarHTML($films[2]);
   $alleHTML .= enkeleFilmNaarHTML($films[3]);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
