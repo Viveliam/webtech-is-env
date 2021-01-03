@@ -1,0 +1,48 @@
+<?php
+session_start();
+?>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/main.css" />  
+    </head>
+    <body>
+        <header>
+            <h1>gebruiker</h1>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Veld</th>
+                    <th>Waarde</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>username</td>
+                    <td><?=$_SESSION['username']?></td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td><?=$_SESSION['firstname']?></td>
+                </tr>
+                <tr>
+                    <td>lastname</td>
+                    <td><?=$_SESSION['lastname']?></td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td><?=$_SESSION['email']?></td>
+                </tr>
+                <tr>
+                    <td>occupation</td>
+                    <td><?=$_SESSION['occupation']?></td>
+                </tr>
+                <tr>
+                    <td>gender</td>
+                    <td><?=$_SESSION['gender']?></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

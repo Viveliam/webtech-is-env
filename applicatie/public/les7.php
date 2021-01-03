@@ -21,7 +21,9 @@
 
     <h1>les 7</h1>
     <h1>Opdracht 1</h1>
-
+    <h1><a href="7-1.php">7-1</a></h1>
     
+    <h1>Opdracht 2</h1>
+    <h1><a href="/registratie/les05_css_formulieren.php">les05_css_formulieren</a></h1>
 </body>
 </html>
