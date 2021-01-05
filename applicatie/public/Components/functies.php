@@ -15,4 +15,15 @@
         $htmlString .= "<img src=".$filmArray['imageURL'].">";
         return $htmlString;
     }
+
+    function createFilm(string $title, int $year, string $director, array $stars, string $imageURL) : array {
+        $nieuweFilm = [
+            'title' => $title,
+            'year' => $year,
+            'director' => $director,
+            'stars' => $stars,
+            'imageURL' => $imageURL
+        ];
+        return $nieuweFilm;
+    }
 ?>

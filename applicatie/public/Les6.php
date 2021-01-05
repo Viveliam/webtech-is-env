@@ -1,5 +1,5 @@
 <?php
-    require_once "functies.php";
+    require_once "Components/functies.php";
     
     $vegetarisch = false;
     $glutenvrij = false;
@@ -112,17 +112,6 @@
         'imageURL' => 'https://m.media-amazon.com/images/M/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]
     ];
-
-    function createFilm(string $title, int $year, string $director, array $stars, string $imageURL) : array {
-        $nieuweFilm = [
-            'title' => $title,
-            'year' => $year,
-            'director' => $director,
-            'stars' => $stars,
-            'imageURL' => $imageURL
-        ];
-        return $nieuweFilm;
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,5 @@
 <?php 
-require_once('connection.php');
+require_once 'Components/connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,6 @@ require_once('connection.php');
     <?php print_r(PDO::getAvailableDrivers()); ?>
 
     <h1>Les 8</h1>
-    
+    <h1><a href="/Components/films.php">films</a></h1>
 </body>
 </html>
