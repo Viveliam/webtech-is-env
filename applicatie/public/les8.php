@@ -9,7 +9,10 @@ require_once('connection.php');
     <title>Document</title>
 </head>
 <body>
-    <h1>Voorbereiding les 7</h1>
+    <h1>Voorbereiding les 8</h1>
     <?php print_r(PDO::getAvailableDrivers()); ?>
+
+    <h1>Les 8</h1>
+    
 </body>
 </html>
